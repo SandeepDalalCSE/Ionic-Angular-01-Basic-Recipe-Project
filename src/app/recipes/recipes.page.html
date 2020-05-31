@@ -9,7 +9,9 @@
     <!-- we will be rendering a list of recipes here! so creating a recipe model -->
     <!-- <ion-item *ngFor="let recipe of recipes" routerLink="{{ recipe.id}}"> // also we can use routerLink like this.-->
     <!-- // adding a relative link to the routerLink -->
-    <ion-item *ngFor="let recipe of recipes" [routerLink]="['./', recipe.id]">
+    <!-- <ion-item *ngFor="let recipe of recipes" [routerLink]="['./', recipe.id]"> -->
+    <!-- // Using absolute path to the router link -->
+    <ion-item *ngFor="let recipe of recipes" [routerLink]="['/recipes', recipe.id]">
       <ion-avatar slot="start">
         <!-- <ion-img src="{{ recipe.imageUrl }}"></ion-img> -->
         <ion-img [src]="recipe.imageUrl"></ion-img>
