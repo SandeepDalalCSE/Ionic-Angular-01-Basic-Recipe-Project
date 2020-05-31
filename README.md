@@ -69,3 +69,15 @@ We will create and setup an ionic project with named 'Ionic-Angular-Project-Setu
 |3 | Now choose `page` from the list that Ionic CLI gave you and then Ionic CLI will ask **_Name/path of page:_** type `recipes` |
 |4 | Ionic CLI will generate a page `recipes` for you and also configure everything for this page. like adds routes, adjusts app-routing.module.ts to include the path for `recipes` page using lazy-loading.  
 |5 | Alternative, just execute this command to generate a page `recipes` directly `ionic generate page recipes` . This is do the same as above.|
+
+## Removing the environments folder and its files from the git
+
+| No. | Steps |
+|---- | ----|
+|1 | It is recommended to not share your api key to the public. And the best place to keep your keys are in `environments` folder in `environment.prod.ts` and `environment.ts` files which help to swaps the key according to the environment, we are working as production or testing/staging. |
+|2 | When you commit your project on git and then on github, you should add these files `environment.prod.ts` and `environment.ts` to the `.gitignore` file. So that while committing your project to git and then on github. These files will be ignored by git and github, therefore would not be loaded to git and github account. |
+|3 | Open `.gitignore` file and add the below path in it. |
+|4 | path for environment.prod.ts file : `src/environments/environment.prod.ts` and path for environment.ts file : `src/environments/environment.ts` |
+|5 | Note : If you committed your project already to git and then you add these files in `.gitignore` file then `.gitignore` will not ignore these files. For that you need to remove these files from the git and then you need to push your project to github. |
+|6 |Suppose in this project we already committed this project and also pushed it to the github. Now adding these files `environment.prod.ts` and `environment.ts` to the `.gitignore file would not be ignored. So delete these files or the complete folder first from the git, for that execute the below command to your terminal. |
+|7 | `git rm -r --cached src/environments` |
