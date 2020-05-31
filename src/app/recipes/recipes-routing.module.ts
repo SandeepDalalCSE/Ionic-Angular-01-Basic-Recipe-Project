@@ -9,13 +9,17 @@ const routes: Routes = [
     component: RecipesPage
   },
   {
-    path: 'recipe-detail',
-    loadChildren: () => import('./recipe-detail/recipe-detail.module').then( m => m.RecipeDetailPageModule)
-  }
+    path: ':recipeId',
+    loadChildren: () => import('./recipe-detail/recipe-detail.module').then(m => m.RecipeDetailPageModule)
+  },
+  // {
+  //   path: 'recipe-detail',
+  //   loadChildren: () => import('./recipe-detail/recipe-detail.module').then( m => m.RecipeDetailPageModule)
+  // },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class RecipesPageRoutingModule {}
+export class RecipesPageRoutingModule { }
