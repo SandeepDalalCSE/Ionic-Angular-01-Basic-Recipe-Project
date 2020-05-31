@@ -97,3 +97,27 @@ We will be describing how a single recipe should look like in `recipe.model.ts` 
 
 Execute this command `ionic generate page recipes/recipe-detail`.
 In this, we will be displaying a single recipe detail.
+
+## Setting recipe-detail path dynamically
+
+Open `recipes-routing.module.ts` file and add this code to set path dynamically
+```html
+const routes: Routes = [
+  {
+    path: '',
+    component: RecipesPage
+  },
+  {
+    path: ':recipeId',
+    loadChildren: () => import('./recipe-detail/recipe-detail.module').then(m => m.RecipeDetailPageModule)
+  },
+  // {
+  //   path: 'recipe-detail',
+  //   loadChildren: () => import('./recipe-detail/recipe-detail.module').then( m => m.RecipeDetailPageModule)
+  // },
+];
+```
+
+## Generating `recipes` service in `recipes` folder
+
+To work with data-communication between two pages, we use services. So generating `recipes` service by executing this command `ionic generate service recipes/recipes`.
