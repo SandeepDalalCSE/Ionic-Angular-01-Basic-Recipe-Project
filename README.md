@@ -81,3 +81,7 @@ We will create and setup an ionic project with named 'Ionic-Angular-Project-Setu
 |5 | Note : If you committed your project already to git and then you add these files in `.gitignore` file then `.gitignore` will not ignore these files. For that you need to remove these files from the git and then you need to push your project to github. |
 |6 |Suppose in this project we already committed this project and also pushed it to the github. Now adding these files `environment.prod.ts` and `environment.ts` to the `.gitignore file would not be ignored. So delete these files or the complete folder first from the git, for that execute the below command to your terminal. |
 |7 | `git rm -r --cached src/environments` |
+
+## Creating `recipe.model.ts` in `recipes` folder
+
+We will be describing how a single recipe should look like in `recipe.model.ts` file.
