@@ -101,7 +101,7 @@ In this, we will be displaying a single recipe detail.
 ## Setting recipe-detail path dynamically
 
 Open `recipes-routing.module.ts` file and add this code to set path dynamically
-```html
+```typescript
 const routes: Routes = [
   {
     path: '',
