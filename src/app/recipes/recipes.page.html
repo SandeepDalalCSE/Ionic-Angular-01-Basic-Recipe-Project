@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>recipes</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,7 +7,9 @@
 <ion-content>
   <ion-list>
     <!-- we will be rendering a list of recipes here! so creating a recipe model -->
-    <ion-item *ngFor="let recipe of recipes">
+    <!-- <ion-item *ngFor="let recipe of recipes" routerLink="{{ recipe.id}}"> // also we can use routerLink like this.-->
+    <!-- // adding a relative link to the routerLink -->
+    <ion-item *ngFor="let recipe of recipes" [routerLink]="['./', recipe.id]">
       <ion-avatar slot="start">
         <!-- <ion-img src="{{ recipe.imageUrl }}"></ion-img> -->
         <ion-img [src]="recipe.imageUrl"></ion-img>
