@@ -85,3 +85,10 @@ We will create and setup an ionic project with named 'Ionic-Angular-Project-Setu
 ## Creating `recipe.model.ts` in `recipes` folder
 
 We will be describing how a single recipe should look like in `recipe.model.ts` file.
+
+## Rendering recipes on index.html file
+
+| No. | Steps |
+|----|----|
+| 1 | Declaring a 'recipes' array of type `Recipe` from `recipe.model.ts` and also assigning values to `recipes` array according to model key-value pairs `recipes.page.ts` .|
+| 2 | Rendering recipes on index.html file using `*ngFor` Directive. |
