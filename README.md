@@ -58,3 +58,14 @@ We will create and setup an ionic project with named 'Ionic-Angular-Project-Setu
 
 ---
 
+# Working with 'Ionic-Angular-01-Basic-Recipe-Project'
+
+## Generating a recipes page using Ionic CLI
+
+| No. | Steps |
+|---- | ---------
+|1 | In VS Code/Any Editor's terminal, Using Ionic CLI; create a page with name 'recipes'. |
+|2 | Execute command `ionic generate` then Ionic CLI will ask **_what would you like to generate ?_** | 
+|3 | Now choose `page` from the list that Ionic CLI gave you and then Ionic CLI will ask **_Name/path of page:_** type `recipes` |
+|4 | Ionic CLI will generate a page `recipes` for you and also configure everything for this page. like adds routes, adjusts app-routing.module.ts to include the path for `recipes` page using lazy-loading.  
+|5 | Alternative, just execute this command to generate a page `recipes` directly `ionic generate page recipes` . This is do the same as above.|
